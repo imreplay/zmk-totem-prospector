@@ -110,6 +110,11 @@
             bindings = <&kp LG(LC(F4))>;
             key-positions = <27 28 29>;
         };
+
+        go_base {
+            bindings = <&to 0>;
+            key-positions = <11 12 13>;
+        };
     };
 
     keymap {
@@ -126,7 +131,7 @@
         };
 
         Nav {
-            display-name = "Nav and num";
+            display-name = "Nav";
             bindings = <
            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
            &trans        &trans        &trans        &trans        &trans          &trans        &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT
@@ -155,13 +160,37 @@
             >;
         };
 
-        Hacking {
+        Layers {
             bindings = <
-        &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans         &trans  &to 5     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LC(LS(C))  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans         &trans  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &to 5   &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &to 6   &to 7     &to 8   &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "layers";
+        };
+
+        Report {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "report";
+        };
+
+        Fiddler {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "Fiddler";
         };
 
         Game {
@@ -171,6 +200,19 @@
 &trans  &trans        &trans        &kp D         &kp F         &trans    &trans  &trans  &trans  &trans  &trans  &to 0
                                     &trans        &kp LCTRL     &trans    &trans  &trans  &trans
             >;
+
+            label = "Game";
+        };
+
+        Hack.v1 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "Hack.v1";
         };
     };
 };
